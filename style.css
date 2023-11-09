@@ -19,16 +19,11 @@
   word-wrap: break-word;
 }
 
-html {
-  background-color: rgb(0, 0, 22);
-}
-
 body {
   /*background: linear-gradient(0deg, rgb(0, 0, 22), var(--dark-body-color));*/
   background: linear-gradient(90deg, black 20%, var(--dark-color));
 
   color: var(--dark-text-color);
-  height: 100vh;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -42,13 +37,12 @@ main {
 }
 
 .content {
-  margin-top: 20px;
   font-size: 15px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0.5px 0.5px 5px var(--dark-body-color);
+  background-color: #000000;
 }
 
 .container2 {
@@ -65,7 +59,7 @@ main {
 .container2 video {
   position: absolute;
   object-fit: cover;
-  object-position: -150px;
+  object-position: -120px;
   left: 0;
   height: 0;
   width: 100%;
@@ -164,7 +158,7 @@ main {
 }
 
 .inputBox form .box_container .password_container {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .inputBox form .submit_btn {
@@ -228,25 +222,78 @@ main {
   color: var(--primary-color);
 }
 
-footer {
-  font-size: 12px;
-  width: 100%;
-  margin-top: 50px;
-  padding-bottom: 50px;
-}
-
 @media (orientation: portrait) {
+
   .content {
     flex-direction: column;
+    background-color: transparent;
     height: 100vh;
+
+  }
+  
+  .container {
+    height: auto;
   }
 
+  .container .banner{
+    width: 700px;
+  }
+
+  .container .banner h1{
+    font-size: 100px;
+  }
+  
+  .container .banner img{
+    width: 100px;
+  }
+  
   .container2{
     order: 2;
+    height: 40px;
+    margin-top: 40px;
+  }
+
+  .container2 .link{
+    top: 0;
+  }
+
+
+  .link ul li a{
+    font-size: 20px;
   }
 
   .container2 video {
     object-position: center;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .inputBox {
+    width: 700px;
+  }
+
+  .inputBox form input, .inputBox form .submit_btn, .login_out{
+    width: 700px;
+    font-size: 50px;
+    align-self: center;
+  }
+  .inputBox form .box_container .password_container {
+    margin-top: 45px;
+  }
+  
+  .forgot_password{
+    margin-top: 20px;
+  }
+  .forgot_password a {
+    font-size: 30px;
+  }
+
+  .login_out a{
+    font-size: 30px;
   }
 }
 /*
