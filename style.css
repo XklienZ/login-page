@@ -296,37 +296,3 @@ main {
     font-size: 30px;
   }
 }
-/*
-
-@media (prefers-color-scheme: light) {
-  html {
-    background-color: rgb(198, 208, 255);
-  }
-
-  body {
-    background: linear-gradient(
-      0deg,
-      rgb(198, 208, 255),
-      var(--light-body-color)
-    );
-    color: var(--light-text-color);
-  }
-
-  header .logo {
-    content: url(./img/github-mark.png);
-  }
-
-  .inputBox {
-    background-color: var(--light-color);
-  }
-
-  .inputBox form input {
-    background-color: var(--light-body-color);
-    color: var(--light-text-color);
-  }
-
-  .login_out span {
-    color: var(--light-text-color);
-  }
-}
- 
