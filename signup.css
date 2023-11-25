@@ -1,0 +1,285 @@
+:root {
+  --primary-color: #0077ff;
+  --primary-color2: #0366d6;
+  --dark-body-color: #000000;
+  --dark-body-color2: #161616;
+  --dark-color: #13223a;
+  --dark-text-color: #ffffff;
+  --light-body-color: #e0e0e0;
+  --light-color: #d0dce9;
+  --light-text-color: #000000;
+  --grey-color: #424242;
+  --green-color: #01bd65;
+  --red-color: #b40000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    var(--dark-body-color) 20%,
+    var(--dark-color)
+  );
+  color: var(--dark-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+h2 {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--primary-color);
+  letter-spacing: 5px;
+}
+
+form {
+  width: 700px;
+}
+
+input {
+  outline: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  min-width: 600px;
+}
+
+.banner img {
+  width: 150px;
+}
+
+.signTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: var(--green-color);
+}
+
+.signTitle a {
+  color: var(--primary-color);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  padding-top: 5px;
+  margin-top: 10px;
+  width: 500px;
+  box-shadow: -4px 4px 19px var(--primary-color2);
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+}
+
+.inpTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--grey-color);
+}
+
+.inputBox .UserInp {
+  margin-top: 10px;
+  margin-left: 40px;
+  border: 0;
+  border-bottom: 1px solid var(--dark-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  width: 300px;
+  font-size: 15px;
+}
+
+.UserInp:focus {
+  border-bottom: 1px solid white;
+}
+
+.UserInp:not(:placeholder-shown) {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.username.invalid {
+  border-bottom: 1px solid var(--red-color);
+}
+
+.userTitle.invalid {
+  color: var(--red-color);
+}
+
+.userTitle.valid {
+  color: var(--green-color);
+}
+
+.userTitle.active {
+  color: white;
+}
+
+.passTitle.active,
+.mailTitle.active {
+  color: white;
+}
+
+.icon.active,
+.icon-x.active {
+  display: block;
+}
+
+.submit {
+  margin-top: 30px;
+  background-color: transparent;
+  color: var(--dark-color);
+  width: 240px;
+  border: 1px solid var(--dark-color);
+  padding: 13px;
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+.submit.active {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.toggle-password {
+  width: 80px;
+  position: absolute;
+  top: 20px;
+  right: -25px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.icon {
+  color: var(--green-color);
+  position: absolute;
+  display: none;
+  top: 0px;
+  right: 5px;
+}
+
+.check {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.line1 {
+  width: 5px;
+  height: 22.2px;
+  background-color: var(--green-color);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
+.line2 {
+  width: 5px;
+  height: 10.28px;
+  background-color: var(--green-color);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 22.2px;
+  left: 32%;
+}
+
+.icon-x {
+  color: var(--green-color);
+  position: absolute;
+  display: none;
+  top: 0px;
+  right: 5px;
+}
+
+.check-x {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.line3 {
+  width: 5px;
+  height: 22px;
+  background-color: var(--red-color);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
+.line4 {
+  width: 5px;
+  height: 22px;
+  background-color: var(--red-color);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
+@media (orientation: portrait) {
+  .banner {
+    min-width: 350px;
+    margin-top: 30px;
+  }
+
+  .signTitle {
+    font-size: small;
+  }
+
+  .banner img {
+    width: 80px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  .inputBox {
+    width: 250px;
+  }
+
+  .inputBox .UserInp {
+    width: 160px;
+  }
+
+  .inpTitle {
+    font-size: small;
+  }
+
+  .submit {
+    width: 160px;
+    font-size: small;
+  }
+
+  .toggle-password {
+    top: 23%;
+  }
+
+  .icon {
+    top: -10%;
+  }
+}

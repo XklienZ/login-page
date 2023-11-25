@@ -106,7 +106,7 @@ main {
   width: 300px;
   position: relative;
 }
-.container .banner h1 {
+.container .banner h2 {
   font-size: 30px;
   color: transparent;
   -webkit-text-stroke: 2px var(--primary-color); /* width and color */
@@ -202,7 +202,8 @@ main {
   color: var(--dark-text-color);
 }
 
-.link ul li a, .container a {
+.link ul li a,
+.container a {
   color: var(--yellow-color);
   outline: none;
   border: 1px solid transparent;
@@ -211,7 +212,8 @@ main {
   font-size: 12px;
 }
 
-.link ul li a:hover, .container a:hover {
+.link ul li a:hover,
+.container a:hover {
   color: var(--primary-color);
 }
 
@@ -223,43 +225,38 @@ main {
 }
 
 @media (orientation: portrait) {
-
   .content {
     flex-direction: column;
     background-color: transparent;
-    height: 100vh;
-
   }
-  
+
   .container {
     height: auto;
   }
 
-  .container .banner{
-    width: 700px;
+  .container .banner {
+    min-width: 350px;
   }
 
-  .container .banner h1{
-    font-size: 100px;
+  .container .banner h2 {
+    font-size: 40px;
   }
-  
-  .container .banner img{
-    width: 100px;
+
+  .container .banner img {
+    width: 80px;
   }
-  
-  .container2{
+
+  .container2 {
     order: 2;
     height: 40px;
-    margin-top: 40px;
   }
 
-  .container2 .link{
+  .container2 .link {
     top: 0;
   }
 
-
-  .link ul li a{
-    font-size: 20px;
+  .link ul li a {
+    font-size: 10px;
   }
 
   .container2 video {
@@ -273,26 +270,31 @@ main {
   }
 
   .inputBox {
-    width: 700px;
+    width: 300px;
   }
 
-  .inputBox form input, .inputBox form .submit_btn, .login_out{
-    width: 700px;
-    font-size: 50px;
+  .inputBox form input,
+  .inputBox form,
+  .login_out {
+    width: 300px;
+    font-size: 15px;
     align-self: center;
   }
-  .inputBox form .box_container .password_container {
-    margin-top: 45px;
-  }
-  
-  .forgot_password{
-    margin-top: 20px;
-  }
-  .forgot_password a {
-    font-size: 30px;
+
+  .inputBox form .submit_btn {
+    font-size: 17px;
   }
 
-  .login_out a{
-    font-size: 30px;
+  .forgot_password a {
+    font-size: 12px;
+  }
+
+  .login_out {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .login_out a {
+    font-size: 13px;
   }
 }
